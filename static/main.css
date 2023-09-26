@@ -1,0 +1,62 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(180deg, #2ca7f2 0%, #1f332c 100%);
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+}
+.flex-window-row{
+    display: flex;
+    flex-direction: row;
+}
+.flex-window-col{
+    display: flex;
+    flex-direction: column;
+}
+.justify-center{
+    justify-content: center;
+}
+.justify-evenly{
+    justify-content: space-evenly;
+}
+.center_div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.main_container{
+    width: 85%;
+    height: 85%;
+    align-items: center;
+}
+/*-----------------------------------------------------------------------------User Info Left Container-----------------------------------------------------------------*/
+.left_userninfo{
+    width: 15%;
+    height: 95%;
+
+    border-radius: 2.1875rem;
+    background: linear-gradient(180deg, rgba(30, 194, 135, 0.70) 11.77%, rgba(47, 84, 218, 0.70) 100%);
+}
+/*---------------------------------------------------------------------------Userinfo_chat_container-------------------------------------------------------------*/
+.chat_userlst_container{
+    width: 80%;
+    height: 95%;
+    align-items: center;
+}
+.user_list_container{
+    height: 15%;
+    width: 100%;
+    border-radius: 2.1875rem;
+    background: rgba(72, 99, 197, 0.63);
+}
+.chat_container{
+    height: 80%;
+    width: 100%;
+    border-radius: 2.1875rem;
+    background: rgba(72, 99, 197, 0.63);
+}
