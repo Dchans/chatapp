@@ -37,6 +37,11 @@ body{
     height: 85%;
     align-items: center;
 }
+.full_img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 /*-----------------------------------------------------------------------------User Info Left Container-----------------------------------------------------------------*/
 .left_userninfo{
     width: 15%;
@@ -63,6 +68,12 @@ body{
     border-radius: 2.1875rem;
     background: rgba(72, 99, 197, 0.63);
 }
+.all_message_continer{
+    height: 80%;
+}
+.input_field_container{
+    height: 20%;
+}
 /*---------------------------------------------------------------------Displaying Users in user list box------------------------------------------------------------*/
 .user_info_container{
     border-radius: 1.5625rem;
@@ -78,4 +89,77 @@ body{
     height: 100%;
     object-fit: cover;
     border-radius: 1.5625rem;
+}
+/****************************************************************Messge container for sender and reciever********************************************************************/
+.message_contaner{
+    position: relative;
+    width: 30%;
+    height: fit-content;
+    background: #C7C7C7;
+    margin: 50px;
+    padding: 5px;
+    border-radius: 1.5625rem;
+    box-shadow: 4px 6px 0px 0px #2A324B;
+}
+.message-reaction{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    bottom: -30px;
+}
+.sender-message .message-reaction{
+    right: -30px;
+}
+.reciever-message .message-reaction{
+    left: -30px;
+}
+.message-reaction img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5rem;
+}
+.message_date_container{
+    width: 80px;
+    background: linear-gradient(180deg, rgba(25, 60, 195, 0.68) 0%, rgba(0, 102, 255, 0.68) 100%);
+    border-radius:5px;
+    margin: 10px;
+    padding: 2px;
+    text-align: center;
+}
+.sender-message{
+    margin-left: auto;
+}
+
+.user_message_container{
+    border-radius: 1.52206rem;
+    background: linear-gradient(86deg, rgba(43, 61, 216, 0.70) 26.97%, rgba(52, 123, 229, 0.83) 73.96%);
+    margin: 10px;
+    padding: 15px;
+}
+.user_message_container span{
+    color: white;
+}
+.message_date_container span{
+    font-size: 0.8em;
+    color: white;
+}
+/*----------------------------------------------------------------Message options----------------------------------------------------*/
+.message-options{
+    background: #1B1818;
+    border-radius: 40px;
+    width: 285px;
+    height: 69px;
+}
+.message-options-div{
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    transform: translateY(-10px);
+    transition: transform 0.5s ease-out;
+    cursor: pointer;
+}
+
+.message-options-div:hover{
+    transform: translateY(-30px);
 }

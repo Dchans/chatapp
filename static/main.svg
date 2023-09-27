@@ -1,0 +1,9 @@
+<svg width="0" height="0">
+  <clipPath id="heartPath">
+    <path d="M100 10 
+             A 40 40, 0, 0, 1, 160 70 
+             Q 160 110, 100 150 
+             Q 40 110, 40 70 
+             A 40 40, 0, 0, 1, 100 10 Z" />
+  </clipPath>
+</svg>
