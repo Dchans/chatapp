@@ -150,6 +150,11 @@ body{
     border-radius: 40px;
     width: 285px;
     height: 69px;
+   
+    transition: box-shadow 0.3s ease-in;
+}
+.message-options:hover{
+    box-shadow: 0px 0px 20px 0px cyan;
 }
 .message-options-div{
     margin: 10px;
