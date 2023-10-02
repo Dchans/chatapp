@@ -4,10 +4,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
         <link href="static/main.css" type="text/css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     </head>
 <body>
     <div class="main_container center_div flex-window-row justify-evenly">
-       <div class="left_userninfo flex-window-col justify-evenly align-center">
+       <div class="left_userninfo flex-window-col justify-evenly align-center" tabindex="0">
           <div class="user_seleced_img"><img  class="full_img" src="static/male.jpg"></div>
           <div class="user_seleced_bio flex-window-col justify-evenly align-center"><span>Ok</span></div>
           <div class="left_extra_options flex-window-col justify-evenly align-center">
@@ -25,52 +26,76 @@
           </div>
        </div>
        <div class="chat_userlst_container flex-window-col justify-evenly">
-            <div class="user_list_container flex-window-row justify-evenly align-center">
-                <div class="user_info_container flex-window-row align-center justify-evenly" name="user1">
+            <div class="user_list_container flex-window-row align-center">
+                <div class="user_info_container" name="user1">
+                    <div class="user_img_div ">
+                       <img src="static/male.jpg">
+                    </div>
+                    <div class="user_name">
+                        <span>Devendran</span>
+                   </div>
+                   
+                    
+                </div>
+                
+                <div class="user_info_container  " name="user1">
                     <div class="user_img_div ">
                        <img src="static/male.jpg">
                     </div>
                 </div>
-                <div class="user_info_container flex-window-row align-center justify-evenly" name="user1">
+                <div class="user_info_container  " name="user1">
                     <div class="user_img_div ">
                        <img src="static/male.jpg">
                     </div>
                 </div>
-                <div class="user_info_container flex-window-row align-center justify-evenly" name="user1">
+                
+                <div class="user_info_container  " name="user1">
                     <div class="user_img_div ">
                        <img src="static/male.jpg">
                     </div>
                 </div>
-                <div class="user_info_container flex-window-row align-center justify-evenly" name="user1">
+                <div class="user_info_container  " name="user1">
                     <div class="user_img_div ">
                        <img src="static/male.jpg">
                     </div>
                 </div>
-                <div class="user_info_container flex-window-row align-center justify-evenly" name="user1">
+                <div class="user_info_container  " name="user1">
                     <div class="user_img_div ">
                        <img src="static/male.jpg">
                     </div>
                 </div>
-                <div class="user_info_container flex-window-row align-center justify-evenly" name="user1">
+                <div class="user_info_container  " name="user1">
                     <div class="user_img_div ">
                        <img src="static/male.jpg">
                     </div>
                 </div>
-                <div class="user_info_container flex-window-row align-center justify-evenly" name="user1">
+                <div class="user_info_container  " name="user1">
                     <div class="user_img_div ">
                        <img src="static/male.jpg">
                     </div>
                 </div>
-                <div class="user_info_container flex-window-row align-center justify-evenly" name="user1">
+                <div class="user_info_container  " name="user1">
                     <div class="user_img_div ">
                        <img src="static/male.jpg">
                     </div>
                 </div>
-                <div class="user_info_container flex-window-row align-center justify-evenly" name="user1">
+                <div class="user_info_container  " name="user1">
+                    <div class="user_img_div ">
+                       <img src="static/male.jpg">
+                    </div>
+                </div> <div class="user_info_container  " name="user1">
                     <div class="user_img_div ">
                        <img src="static/male.jpg">
                     </div>
                 </div>
+                <div class="user_info_container  " name="user1">
+                    <div class="user_img_div ">
+                       <img src="static/male.jpg">
+                    </div>
+                </div>
+
+                
+                
             </div>
             <div class="chat_container">
                 <div class="all_message_continer flex-window-col">
@@ -85,8 +110,10 @@
                         <div class="user_message_container"><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dictum scelerisque dui vel malesuada. Mauris nec commodo ligula.</span></div>
                     </div>
                 </div>
-                <div class="input_field_container flex-window-row justify-evenly align-center">
-                    <div class="message-options flex-window-row">
+                <div class="input_field_container flex-window-row justify-center align-center">
+                    <div class="message-options flex-window-row message_content"><input></div>
+                    <div class="message-options  message_type flex-window-row">
+                        
                         <div class="message-options-div"><img class="full_img" src="static/send.png"></div>
                         <div class="message-options-div"><img class="full_img" src="static/picture.png"></div>
                         <div class="message-options-div"><img class="full_img" src="static/video.png"></div>
@@ -97,7 +124,19 @@
             </div>
      </div>
     </div>
-
+   <script>
+    $(".input_field_container .message-options-div").click((e)=>{
+      console.log( $($(e.target).parent()))
+       $(".input_field_container .message_type").css({"width":"80px"})
+        $(".message-options.message_content")
+        .css({
+            width:"40%"
+        })
+        setTimeout(()=>{
+            $(".input_field_container .message_type").css({"flex-direction":"column"})
+        },490)
+    })
+   </script>
 
 </body>
 </html>

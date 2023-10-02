@@ -8,7 +8,7 @@
     box-sizing: border-box;
 }
 body{
-    background: linear-gradient(180deg, #2ca7f2 0%, #1f332c 100%);
+    background: linear-gradient(135deg, #8363a1 0%, #74a8c3 100%);;
     width: 100vw;
     height: 100vh;
     background-repeat: no-repeat;
@@ -48,8 +48,8 @@ body{
 }
 /*-----------------------------------------------------------------------------User Info Left Container-----------------------------------------------------------------*/
 .left_userninfo{
-    width: 15%;
-    height: 95%;
+    width: 200px;
+    height: 100%;
     border-radius: 2.1875rem;
     background: linear-gradient(180deg, rgba(30, 194, 135, 0.70) 11.77%, rgba(47, 84, 218, 0.70) 100%);
 }
@@ -112,6 +112,8 @@ body{
     width: 100%;
     border-radius: 2.1875rem;
     background: rgba(72, 99, 197, 0.63);
+    overflow: hidden;
+    overflow-x: auto;
 }
 .chat_container{
     height: 80%;
@@ -121,19 +123,35 @@ body{
 }
 .all_message_continer{
     height: 80%;
+    overflow-y: auto;
 }
 .input_field_container{
     height: 20%;
 }
 /*---------------------------------------------------------------------Displaying Users in user list box------------------------------------------------------------*/
 .user_info_container{
+    position: relative;
     border-radius: 1.5625rem;
     background: linear-gradient(180deg, #00FF47 20.62%, #FF006B 95.1%);
     height: 80%;
+    min-width: 80px;
+    margin-left: 11px;
+    margin-right: 11px;
+}
+.user_info_container:hover .user_img_div{
+    transform: translateY(-10px);
+}
+.user_info_container:hover .user_name{
+   opacity: 1;
 }
 .user_img_div{
+    position: relative;
     width: 95%;
     height: 90%;
+    margin-top: 4px;
+    margin-left: 2px;
+    transition:  transform 0.2s ease-in;
+    
 }
 .user_img_div img{
     width: 100%;
@@ -141,6 +159,18 @@ body{
     object-fit: cover;
     border-radius: 1.5625rem;
 }
+.user_info_container .user_name{
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+    text-align: center;
+    background: beige;
+    opacity: 0;
+    transition:  opacity 0.2s ease-in;
+}
+.user_info_container .user_name span{
+    font-size: 15px;
+} 
 /****************************************************************Messge container for sender and reciever********************************************************************/
 .message_contaner{
     position: relative;
@@ -151,11 +181,12 @@ body{
     padding: 5px;
     border-radius: 1.5625rem;
     box-shadow: 4px 6px 0px 0px #2A324B;
+  
 }
 .message-reaction{
     position: absolute;
-    width: 70px;
-    height: 70px;
+    width: 55px;
+    height: 55px;
     bottom: -30px;
 }
 .sender-message .message-reaction{
@@ -201,8 +232,8 @@ body{
     border-radius: 40px;
     width: 285px;
     height: 69px;
-   
-    transition: box-shadow 0.3s ease-in;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease-in,width 0.5s ease-in;
 }
 .message-options:hover{
     box-shadow: 0px 0px 20px 0px cyan;
@@ -218,4 +249,46 @@ body{
 
 .message-options-div:hover{
     transform: translateY(-30px);
+}
+.message-options.message_content{
+  width: 0 ;
+}
+.message-options.message_content input{
+    width: 100%;
+    border: none;
+    outline: none;
+    text-indent: 18px;
+    font-size: 30px;
+ }
+.message-options-div img{
+    margin-top: 9px;
+}
+/*------------------------------------------------Media Queries-------------------------------------------------------------------------------------------------------*/
+@media screen and (max-width:1000px) {
+    .main_container{
+        width: 100%;
+        height: 100%;
+    }
+    
+    .left_userninfo{
+        position: absolute;
+        left: -180px;
+        z-index: 10;
+
+    }
+    .left_userninfo:focus{
+        background: red;
+        left: 0px;
+    }
+    .message_contaner{
+        width: 75%;
+    }
+   
+   
+}
+@media screen and (max-width:270px) {
+    .main_container{
+       display: none;
+    }
+   
 }
